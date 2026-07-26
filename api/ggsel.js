@@ -1,3 +1,5 @@
+console.log('GGSEL_API_KEY:', process.env.GGSEL_API_KEY);
+console.log('GGSEL_SELLER_ID:', process.env.GGSEL_SELLER_ID);
 const axios = require('axios');
 const crypto = require('crypto');
 const config = require('../config/config');
