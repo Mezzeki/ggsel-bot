@@ -23,9 +23,12 @@ async function getSellerToken() {
     });
     return response.data.token;
   } catch (error) {
-    console.error('Failed to get token:', error.response?.data || error.message);
-    throw error;
-  }
+  console.error("=== LOGIN ERROR ===");
+  console.error("Status:", error.response?.status);
+  console.error("Data:", error.response?.data);
+  console.error("Request:", payload);
+  throw error;
+}
 }
 
 // Получение последних заказов с использованием токена
